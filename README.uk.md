@@ -20,33 +20,33 @@
 
 Якщо щось тут виглядає неправильним або щось вище не працює, будь ласка повідомте нас у [каналі Discord](https://discord.gg/typescript).
 
-## What are declaration files and how do I get them?
+## Що таке декларації файлів (типів) та як я можу отримати їх?
 
-See the [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
+Перейдіть до [довідника TypeScript](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
 
-### npm
+### NPM
 
-This is the preferred method. For example:
+Це рекомендованний метод. Приклад:
 
 ```sh
 npm install --save-dev @types/node
 ```
 
-The types should then be automatically included by the compiler.
-You may need to add a `types` reference if you're not using modules:
+Типи повинні бути включені компілятором автоматично.
+Вам може знадобитись додати `types` зв'язок якщо ви не використовуєте модулі:
 
 ```ts
 /// <reference types="node" />
 ```
 
-See more in the [handbook](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html).
+Дивіться більше у [довіднику TypeScript](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html).
 
-For an npm package "foo", typings for it will be at "@types/foo".
-If you can't find your package, look for it on [TypeSearch](https://microsoft.github.io/TypeSearch/).
+Для NPM пакету `foo`, його типи повинні бути у `@types/foo`.
+Якщо ви не можете знайти необхідний вам пакет, шукайте його у [TypeSearch](https://microsoft.github.io/TypeSearch/).
 
-If you still can't find it, check if it [bundles](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) its own typings.
-This is usually provided in a `"types"` or `"typings"` field in the `package.json`,
-or just look for any ".d.ts" files in the package and manually include them with a `/// <reference path="" />`.
+Якщо ви все ще не можете знайти необхідний вам пакет, перевірте чи не [включає](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) він свої власні типи.
+Типи зазвичай задаються у полі `"types"` або `"typings"` у файлі `package.json`,
+або просто знайдіть будь-які `.d.ts` файли у вашому пакеті та вручну додайте їх за допомогою `/// <reference path="" />`.
 
 ### Support Window
 
