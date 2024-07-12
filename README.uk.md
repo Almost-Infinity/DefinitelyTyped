@@ -48,19 +48,22 @@ npm install --save-dev @types/node
 Типи зазвичай задаються у полі `"types"` або `"typings"` у файлі `package.json`,
 або просто знайдіть будь-які `.d.ts` файли у вашому пакеті та вручну додайте їх за допомогою `/// <reference path="" />`.
 
-### Support Window
+### "Вікно" підтримки
 
-Definitely Typed only tests packages on versions of TypeScript that are less than 2 years old.
+Definitely Typed тестує пакети на версіях TypeScript яким менше ніж 2 роки.
 
 <details>
 <summary>Currently versions 4.1 and above are tested...</summary>
 
-If you're using TypeScript 2.0 to 4.0, you can still try installing `@types` packages &mdash; the majority of packages don't use fancy new TypeScript features.
-But there's no guarantee that they'll work.
-Here is the support window:
+Якщо ви використовуєте версії TypeScript з 2.0 до 4.0, ви все ще можете спробувати встановити `@types` пакети &mdash; більшість пакетів не використовують нові функції TypeScript.
+Але немає гарантії, що вони будуть працювати.
+Графік оновлень:
 
 <img src="docs/support-window.svg#gh-light-mode-only" style="width:100%">
 <img src="docs/support-window.svg#gh-dark-mode-only" style="width:100%">
+
+`@types` пакети мають мітки версій TypeScript які вони "явно" підтримують. Таким чином ви, зазвичай, можете встановити старіші версії пакетів що передують дворічному "вікну".
+Наприклад, якщо
 
 `@types` packages have tags for versions of TypeScript that they explicitly support, so you can usually get older versions of packages that predate the 2-year window.
 For example, if you run `npm dist-tags @types/react`, you'll see that TypeScript 2.5 can use types for react@16.0, whereas TypeScript 2.6 and 2.7 can use types for react@16.4:
